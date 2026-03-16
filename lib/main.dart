@@ -1,4 +1,4 @@
-import 'package:connectchat/core/services/connectycube_services.dart';
+import 'package:connectchat/core/service/connectycube_services.dart';
 import 'package:connectchat/core/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';

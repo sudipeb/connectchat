@@ -1,0 +1,224 @@
+{
+    "@@locale": "en",
+    "helloWorld": "Hello World",
+    "serverError": "Server Error, Please try again!",
+    "someThingWentWrong": "Some thing went wrong,Please try again!",
+    "settings": "Settings",
+    "notifications": "Notifications",
+    "mySubscription": "My Subscription",
+    "securitySettings": "Security Settings",
+    "appSettings": "App Settings",
+    "termsAndConditions": "Terms and conditions",
+    "privacyPolicy": "Privacy Policy",
+    "privacypolicy": "Privacy policy",
+    "contactUs": "Contact us",
+    "logOut": "Log Out",
+    "loginWithSocials": "Log in with your socials",
+    "cameraAccessMessage": "To use camera you first have to turn on permission from Settings.",
+    "galleryAccessMessage": "To use gallery you first have to turn on permission from Settings.",
+    "fileAccessMessage": "To use file you first have to turn on permission from Settings.",
+    "by": "by",
+    "and": "and",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "createAccount": "Create an account",
+    "or": "Or",
+    "noAccount": "Don't have an account?",
+    "termsOfService": "  Terms of Service",
+    "disclaimer": "By continuing, you are agreeing to our ",
+    "reEnterNewPassword": "Re-enter new password",
+    "changePassword": "Change password",
+    "sentLinkTo": "Send link to",
+    "emailVerifications": "Email verifications",
+    "emailVerification": "Email verification",
+    "checkYourEmailForCode": "Check your email and enter the 6 digit code sent to:",
+    "changeEmail": "Change email",
+    "sendNewCode": "Send new code",
+    "updateAvailable": "Update available",
+    "update": "Update",
+    "updateAvailableDetails": "A new version of the app is available. Please update to continue using the app.",
+    "whatsNew": "What's new",
+    "time_remaining": "({minutes, plural, =1 {1 minute} other {{minutes} minutes}}, {seconds, plural, =1 {1 second} other {{seconds} seconds}} remaining)",
+    "@time_remaining": {
+      "description": "Displays the time remaining in minutes and seconds",
+      "placeholders": {
+        "minutes": {
+          "type": "int",
+          "example": "1"
+        },
+        "seconds": {
+          "type": "int",
+          "example": "55"
+        }
+      }
+    },
+    "permissionRequired": "Permission Required",
+    "validPasscode": "Passcode must be 4 digits.",
+    "profilePicture": "Profile Picture",
+    "profileDetails": "Profile Details",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailAddress": "Email address",
+    "pickImage": "Pick image",
+    "fromGallery": "From Gallery",
+    "fromCamera": "From Camera",
+    "close": "Close",
+    "nameRequired": "Name is required.",
+    "dobRequired": "Date of birth is required.",
+    "firstNameRequired": "First name is required.",
+    "lastNameRequired": "Last name is required",
+    "saveChanges": "Save Changes",
+    "verifyAndContinue": "Verify and continue",
+    "profileUpdated": "Profile has been updated successfully!",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "error": "Error",
+    "success": "Success",
+    "logoutConfirmationContent": "Are you sure you want to logout?",
+    "logout": "Logout",
+    "aboutYou": "About you",
+    "subscribe": "Subscribe",
+    "name": "Name",
+    "dob": "Date of Birth",
+    "select": "Select",
+    "edit": "Edit",
+    "removeUser": "Remove User",
+    "appSettingsPageTitle": "App settings",
+    "validPasswordRequired": "Password must contain:\n• One upper case letter\n• One lower case letter\n• One special character\n• A number\n• 8 to 16 Characters",
+    "createYourAccount": "Create your account",
+    "home": "Home",
+    "email": "Email",
+    "password": "Password",
+    "repeatPassword": "Repeat Password",
+    "dontHaveAnAccount": "Dont have an account?",
+    "age": "Age",
+    "sex": "Sex",
+    "number": "Number",
+    "phone": "Phone",
+    "phoneNumber": "Phone number",
+    "preferNotToSay": "Prefer not to say",
+    "forgotPassword": "Forgot Password?",
+    "loginToYourAccount": "Login to your account",
+    "forgotYourPassword": "Forgot your password?",
+    "updatePassword": "Update password",
+    "updateYourEmail": "Update your email",
+    "updateYourPhone": "Update your phone",
+    "forgotPasswordDescription": "You will receive an email that will help you create a new password for your account.",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "resetYourPassword": "Reset your Password",
+    "updateYourPassword": "Update your password",
+    "passwordRequired": "Password is required.",
+    "validPassword": "Password must contain:\n• One upper case letter\n• One lower case letter\n• One special character\n• A number\n• 8 to 16 Characters",
+    "repeatYourPassword": "Repeat your password",
+    "repeatPasswordRequired": "Repeat password is required.",
+    "next": "Next",
+    "submit": "Submit",
+    "continues": "Continue",
+    "register": "Register",
+    "repeatPasswordNotMatch": "Repeat password not match.",
+    "emailRequired": "Email is required.",
+    "emailSent": "We have sent you an email with a code to the email",
+    "phoneNumberRequired": "Phone number is required.",
+    "noProductsFound": "No products found",
+    "monthlyPlan": "Monthly Plan",
+    "yearlyPlan": "Yearly Plan",
+    "currentPlan": "Current Plan",
+    "perMonth": "Per Month",
+    "perYear": "Per Year",
+    "features": "Features",
+    "profile": "Profile",
+    "editProfile": "Edit Profile",
+    "deleteAccount": "Delete account",
+    "deleteAccountConfirmation": "Are you sure you want to delete your account?",
+    "deleteAccountSuccess": "Your account has been deleted successfully.",
+    "permissions": "Permissions",
+    "permission": "Permission",
+    "chooseAnOption": "Choose an option",
+    "cameraPermissionDenied": "Camera Permission Denied",
+    "camera": "Camera",
+    "galleryPermissionDenied": "Gallery Permission Denied",
+    "gallery": "Gallery",
+    "filePermissionDenied": "File Permission Denied",
+    "file": "file",
+    "openSettings": "Open Settings",
+    "cameraAccessSentence": "To select a photo using camera you first have to turn on permission to access camera from Settings > Apps.",
+    "cameraPermissionSentence": "We use your camera to detect facial hair in your face",
+    "notificationPermissionSentence": "We send notifications for your daily/weekly reminder to scan",
+    "areYouSureYouWantToLogOut": "Are you sure you want to log out?",
+    "cancelEmailVerification": "Cancel Email Verification",
+    "areYouSureYouWantToCancelEmailVerification": "Are you sure you want to cancel your email verification?",
+    "value": "Value",
+    "otp": "OTP",
+    "otpLengthValidation": "OTP code must be 6 digits",
+    "invalidOtp": "Please enter valid OTP",
+    "otpRequestFailed": "Otp Request Failed",
+    "invalidName": "Invalid name",
+    "cvv": "CVV",
+    "url": "URL",
+    "oldPassword": "Old password",
+    "newPassword": "New password",
+    "passwordDoNotMatch": "Passwords do not match.",
+    "repeatPasswordNotMatching": "Repeat password does not match with new password.",
+    "requiredFieldValidation": "{name} is required.",
+    "@requiredFieldValidation": {
+      "description": "Validation for required field.",
+      "placeholders": {
+        "name": {
+          "type": "String"
+        }
+      }
+    },
+    "refMinLengthValidationHelper": "{fieldName} must be greater than 2 characters",
+    "@refMinLengthValidationHelper": {
+      "description": "Name input field validation",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "nameMaxLengthValidationHelper": "{fieldName} must be less than 60 characters",
+    "@nameMaxLengthValidationHelper": {
+      "description": "Name input field validation",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "invalidFieldValidationMessage": "Enter a valid {fieldName}.",
+    "@invalidFieldValidationMessage": {
+      "description": "Field validation message",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "characterLengthValidation": "Value cannot be more than {limit} characters",
+    "@characterLengthValidation": {
+      "description": "Validation message for character limit",
+      "placeholders": {
+        "limit": {
+          "type": "int"
+        }
+      }
+    },
+    "otpCodeRequired": "OTP code is required.",
+    "validOTPCode": "OTP code must be 6 digits.",
+    "passwordUpdate": "Your password has been updated successfully.",
+    "currentPassword": "Current password",
+    "newChangePassword": "New Password is required",
+    "welcomeBack": "Welcome {name} 👋",
+    "@welcomeBack": {
+      "description": "Welcome message with user's name",
+      "placeholders": {
+        "name": {
+          "type": "String"
+        }
+      }
+    },
+    "imageSizeError": "File size exceeded limit size.",
+    "filePickError": "Error picking file, Please try again",
+    "retry": "Retry"
+  }

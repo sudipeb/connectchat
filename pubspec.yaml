@@ -33,7 +33,20 @@ dependencies:
   injectable: ^2.7.1+4
   get_it: ^9.2.1
   auto_route: ^11.1.0
-
+  freezed_annotation: ^3.1.0
+  dio: ^5.8.0+1
+  intl: ^0.20.2
+  intl_utils: ^2.8.11
+  hive_ce_flutter: ^2.3.3
+  hive_flutter: ^1.1.0
+  hive_local_storage: ^2.0.11
+  simplex:
+    git:
+      url: https://github.com/basnetjiten/simplex.git
+      ref: master
+  ferry: ^0.16.1+2
+  eraser: ^3.0.0
+  logger: ^2.7.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -42,6 +55,19 @@ dev_dependencies:
   auto_route_generator: ^10.0.1
   injectable_generator: ^2.1.5
   build_runner: ^2.5.4
+  freezed: ^3.2.3
+  hive_ce_generator: ^1.9.3
+  ferry_generator: ^0.14.0-dev.1
+
+dependency_overrides:
+  intl: ^0.20.2
+
+flutter_intl:
+  enabled: true
+  class_name: AppLocalizations
+  main_locale: en
+  arb_dir: lib/localization/arb
+  output_dir: lib/localization/generated
 
 flutter:
   # The following line ensures that the Material Icons font is

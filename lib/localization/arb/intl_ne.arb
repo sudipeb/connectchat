@@ -1,0 +1,225 @@
+{
+    "@@locale": "ne",
+    "helloWorld": "नमस्ते संसार",
+    "serverError": "सर्भर त्रुटि भयो, कृपया फेरि प्रयास गर्नुहोस्!",
+    "someThingWentWrong": "केही समस्या आयो, कृपया फेरि प्रयास गर्नुहोस्!",
+    "settings": "सेटिङहरू",
+    "notifications": "सूचनाहरू",
+    "mySubscription": "मेरो सदस्यता",
+    "securitySettings": "सुरक्षा सेटिङहरू",
+    "appSettings": "एप सेटिङहरू",
+    "termsAndConditions": "नियम तथा सर्तहरू",
+    "privacyPolicy": "गोपनीयता नीति",
+    "privacypolicy": "गोपनीयता नीति",
+    "contactUs": "सम्पर्क गर्नुहोस्",
+    "logOut": "लगआउट",
+    "loginWithSocials": "सामाजिक सञ्जाल प्रयोग गरेर लगइन गर्नुहोस्",
+    "cameraAccessMessage": "क्यामेरा प्रयोग गर्न सेटिङहरूबाट अनुमति दिनुहोस्।",
+    "galleryAccessMessage": "ग्यालरी प्रयोग गर्न सेटिङहरूबाट अनुमति दिनुहोस्।",
+    "fileAccessMessage": "फाइल प्रयोग गर्न सेटिङहरूबाट अनुमति दिनुहोस्।",
+    "by": "द्वारा",
+    "and": "र",
+    "login": "लगइन",
+    "getStarted": "सुरु गर्नुहोस्",
+    "createAccount": "खाता बनाउनुहोस्",
+    "or": "वा",
+    "noAccount": "खाता छैन?",
+    "termsOfService": "सेवाका सर्तहरू",
+    "disclaimer": "जारी राख्दा तपाईं सहमत हुनुहुन्छ",
+    "reEnterNewPassword": "नयाँ पासवर्ड पुनः प्रविष्ट गर्नुहोस्",
+    "changePassword": "पासवर्ड परिवर्तन गर्नुहोस्",
+    "sentLinkTo": "लिङ्क पठाइयो",
+    "emailVerifications": "इमेल प्रमाणीकरणहरू",
+    "emailVerification": "इमेल प्रमाणीकरण",
+    "checkYourEmailForCode": "तपाईंको इमेल जाँच गर्नुहोस् र पठाइएको ६ अंकको कोड प्रविष्ट गर्नुहोस्:",
+    "changeEmail": "इमेल परिवर्तन गर्नुहोस्",
+    "sendNewCode": "नयाँ कोड पठाउनुहोस्",
+    "updateAvailable": "अपडेट उपलब्ध छ",
+    "update": "अपडेट",
+    "updateAvailableDetails": "एपको नयाँ संस्करण उपलब्ध छ। कृपया प्रयोग जारी राख्न अपडेट गर्नुहोस्।",
+    "whatsNew": "नयाँ के छ",
+    "time_remaining": "({minutes, plural, =1 {१ मिनेट} other {{minutes} मिनेट}}, {seconds, plural, =1 {१ सेकेन्ड} other {{seconds} सेकेन्ड}} बाँकी)",
+    "@time_remaining": {
+      "description": "Displays the time remaining in minutes and seconds",
+      "placeholders": {
+        "minutes": {
+          "type": "int",
+          "example": "1"
+        },
+        "seconds": {
+          "type": "int",
+          "example": "55"
+        }
+      }
+    },
+    "permissionRequired": "अनुमति आवश्यक छ",
+    "validPasscode": "पासकोड ४ अंकको हुनुपर्छ।",
+    "profilePicture": "प्रोफाइल तस्वीर",
+    "profileDetails": "प्रोफाइल विवरण",
+    "firstName": "पहिलो नाम",
+    "lastName": "थर",
+    "emailAddress": "इमेल ठेगाना",
+    "pickImage": "तस्वीर छान्नुहोस्",
+    "fromGallery": "ग्यालरीबाट",
+    "fromCamera": "क्यामेराबाट",
+    "close": "बन्द गर्नुहोस्",
+    "nameRequired": "नाम आवश्यक छ।",
+    "dobRequired": "जन्म मिति आवश्यक छ।",
+    "firstNameRequired": "पहिलो नाम आवश्यक छ।",
+    "lastNameRequired": "थर आवश्यक छ।",
+    "saveChanges": "परिवर्तनहरू सुरक्षित गर्नुहोस्",
+    "verifyAndContinue": "प्रमाणित गरी अगाडि बढ्नुहोस्",
+    "profileUpdated": "प्रोफाइल सफलतापूर्वक अपडेट भयो!",
+    "cancel": "रद्द गर्नुहोस्",
+    "ok": "ठीक छ",
+    "error": "त्रुटि",
+    "success": "सफल",
+    "logoutConfirmationContent": "के तपाईं लगआउट गर्न निश्चित हुनुहुन्छ?",
+    "logout": "लगआउट",
+    "aboutYou": "तपाईंको बारेमा",
+    "subscribe": "सदस्यता लिनुहोस्",
+    "name": "नाम",
+    "dob": "जन्म मिति",
+    "select": "छान्नुहोस्",
+    "edit": "सम्पादन गर्नुहोस्",
+    "removeUser": "प्रयोगकर्ता हटाउनुहोस्",
+    "appSettingsPageTitle": "एप सेटिङहरू",
+    "validPasswordRequired": "पासवर्डमा हुनुपर्छ:\n• एउटा ठूलो अक्षर\n• एउटा सानो अक्षर\n• एउटा विशेष चिन्ह\n• एउटा अंक\n• ८ देखि १६ अक्षर",
+    "createYourAccount": "तपाईंको खाता बनाउनुहोस्",
+    "home": "गृह",
+    "email": "इमेल",
+    "password": "पासवर्ड",
+    "repeatPassword": "पासवर्ड दोहोर्याउनुहोस्",
+    "dontHaveAnAccount": "खाता छैन?",
+    "age": "उमेर",
+    "sex": "लिङ्ग",
+    "number": "नम्बर",
+    "phone": "फोन",
+    "phoneNumber": "फोन नम्बर",
+    "preferNotToSay": "भन्न चाहन्न",
+    "forgotPassword": "पासवर्ड बिर्सनुभयो?",
+    "loginToYourAccount": "तपाईंको खातामा लगइन गर्नुहोस्",
+    "forgotYourPassword": "पासवर्ड बिर्सनुभयो?",
+    "updatePassword": "पासवर्ड अपडेट गर्नुहोस्",
+    "updateYourEmail": "इमेल अपडेट गर्नुहोस्",
+    "updateYourPhone": "फोन नम्बर अपडेट गर्नुहोस्",
+    "forgotPasswordDescription": "तपाईंलाई नयाँ पासवर्ड बनाउन सहयोग गर्ने इमेल पठाइनेछ।",
+    "alreadyHaveAnAccount": "पहिले नै खाता छ?",
+    "resetYourPassword": "पासवर्ड रिसेट गर्नुहोस्",
+    "updateYourPassword": "तपाईंको पासवर्ड अपडेट गर्नुहोस्",
+    "passwordRequired": "पासवर्ड आवश्यक छ।",
+    "validPassword": "पासवर्डमा हुनुपर्छ:\n• एउटा ठूलो अक्षर\n• एउटा सानो अक्षर\n• एउटा विशेष चिन्ह\n• एउटा अंक\n• ८ देखि १६ अक्षर",
+    "repeatYourPassword": "पासवर्ड दोहोर्याउनुहोस्",
+    "repeatPasswordRequired": "पासवर्ड दोहोर्याउन आवश्यक छ।",
+    "next": "अर्को",
+    "submit": "पेश गर्नुहोस्",
+    "continues": "जारी राख्नुहोस्",
+    "register": "दर्ता गर्नुहोस्",
+    "repeatPasswordNotMatch": "पासवर्ड मिलेन।",
+    "emailRequired": "इमेल आवश्यक छ।",
+    "emailSent": "कोडसहितको इमेल पठाइएको छ",
+    "phoneNumberRequired": "फोन नम्बर आवश्यक छ।",
+    "noProductsFound": "कुनै उत्पादन भेटिएन",
+    "monthlyPlan": "मासिक योजना",
+    "yearlyPlan": "वार्षिक योजना",
+    "currentPlan": "हालको योजना",
+    "perMonth": "प्रति महिना",
+    "perYear": "प्रति वर्ष",
+    "features": "विशेषताहरू",
+    "profile": "प्रोफाइल",
+    "editProfile": "प्रोफाइल सम्पादन गर्नुहोस्",
+    "deleteAccount": "खाता मेटाउनुहोस्",
+    "deleteAccountConfirmation": "के तपाईं खाता मेटाउन निश्चित हुनुहुन्छ?",
+    "deleteAccountSuccess": "तपाईंको खाता सफलतापूर्वक मेटाइयो।",
+    "permissions": "अनुमतिहरू",
+    "permission": "अनुमति",
+    "chooseAnOption": "विकल्प छान्नुहोस्",
+    "cameraPermissionDenied": "क्यामेरा अनुमति अस्वीकृत",
+    "camera": "क्यामेरा",
+    "galleryPermissionDenied": "ग्यालरी अनुमति अस्वीकृत",
+    "gallery": "ग्यालरी",
+    "filePermissionDenied": "फाइल अनुमति अस्वीकृत",
+    "file": "फाइल",
+    "openSettings": "सेटिङ खोल्नुहोस्",
+    "cameraAccessSentence": "क्यामेरा प्रयोग गरी फोटो लिन सेटिङ > एप्स बाट अनुमति दिनुहोस्।",
+    "cameraPermissionSentence": "हामी तपाईंको क्यामेरा अनुहारको दाह्री पत्ता लगाउन प्रयोग गर्छौं",
+    "notificationPermissionSentence": "हामी दैनिक/साप्ताहिक स्क्यान सम्झनाका लागि सूचना पठाउँछौं",
+    "areYouSureYouWantToLogOut": "के तपाईं लगआउट गर्न चाहनुहुन्छ?",
+    "cancelEmailVerification": "इमेल प्रमाणीकरण रद्द गर्नुहोस्",
+    "areYouSureYouWantToCancelEmailVerification": "के तपाईं इमेल प्रमाणीकरण रद्द गर्न चाहनुहुन्छ?",
+    "value": "मान",
+    "otp": "ओटीपी",
+    "otpLengthValidation": "ओटीपी कोड ६ अंकको हुनुपर्छ",
+    "invalidOtp": "मान्य ओटीपी प्रविष्ट गर्नुहोस्",
+    "otpRequestFailed": "ओटीपी अनुरोध असफल भयो",
+    "invalidName": "अमान्य नाम",
+    "cvv": "सीभीभी",
+    "url": "यूआरएल",
+    "oldPassword": "पुरानो पासवर्ड",
+    "newPassword": "नयाँ पासवर्ड",
+    "passwordDoNotMatch": "पासवर्ड मिलेन।",
+    "repeatPasswordNotMatching": "दोहोऱ्याइएको पासवर्ड नयाँ पासवर्डसँग मिलेन।",
+    "requiredFieldValidation": "{name} आवश्यक छ।",
+    "@requiredFieldValidation": {
+      "description": "Validation for required field.",
+      "placeholders": {
+        "name": {
+          "type": "String"
+        }
+      }
+    },
+    "refMinLengthValidationHelper": "{fieldName} कम्तीमा २ अक्षरभन्दा बढी हुनुपर्छ",
+    "@refMinLengthValidationHelper": {
+      "description": "Name input field validation",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "nameMaxLengthValidationHelper": "{fieldName} ६० अक्षरभन्दा कम हुनुपर्छ",
+    "@nameMaxLengthValidationHelper": {
+      "description": "Name input field validation",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "invalidFieldValidationMessage": "मान्य {fieldName} प्रविष्ट गर्नुहोस्।",
+    "@invalidFieldValidationMessage": {
+      "description": "Field validation message",
+      "placeholders": {
+        "fieldName": {
+          "type": "String"
+        }
+      }
+    },
+    "characterLengthValidation": "मान {limit} अक्षरभन्दा बढी हुन सक्दैन",
+    "@characterLengthValidation": {
+      "description": "Validation message for character limit",
+      "placeholders": {
+        "limit": {
+          "type": "int"
+        }
+      }
+    },
+    "otpCodeRequired": "ओटीपी कोड आवश्यक छ।",
+    "validOTPCode": "ओटीपी कोड ६ अंकको हुनुपर्छ।",
+    "passwordUpdate": "तपाईंको पासवर्ड सफलतापूर्वक अपडेट भयो।",
+    "currentPassword": "हालको पासवर्ड",
+    "newChangePassword": "नयाँ पासवर्ड आवश्यक छ",
+    "welcomeBack": "फेरि स्वागत छ {name} 👋",
+    "@welcomeBack": {
+      "description": "Welcome message with user's name",
+      "placeholders": {
+        "name": {
+          "type": "String"
+        }
+      }
+    },
+    "imageSizeError": "फाइल साइज सीमा नाघ्यो।",
+    "filePickError": "फाइल छान्दा त्रुटि भयो, कृपया फेरि प्रयास गर्नुहोस्",
+    "retry": "पुनः प्रयास गर्नुहोस्"
+  }
+  
