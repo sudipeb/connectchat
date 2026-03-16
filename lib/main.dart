@@ -1,4 +1,5 @@
 import 'package:connectchat/core/services/connectycube_services.dart';
+import 'package:connectchat/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -9,9 +10,11 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final _appRouter = AppRouter();
+
+  MyApp({super.key});
   @override
   Widget build(context) {
-    return MaterialApp();
+    return MaterialApp.router(routerConfig: _appRouter.config());
   }
 }
