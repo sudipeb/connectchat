@@ -9,8 +9,8 @@ part 'registration_cubit.freezed.dart';
 part 'registration_state.dart';
 
 @injectable
-class RegistationCubit extends SimplexCubit<RegistrationState> {
-  RegistationCubit(this._authRepository) : super(RegistrationState.initial());
+class RegistrationCubit extends SimplexCubit<RegistrationState> {
+  RegistrationCubit(this._authRepository) : super(RegistrationState.initial());
   final AuthRepository _authRepository;
   void onEmailChange({required String email}) {
     emit(
@@ -56,23 +56,51 @@ class RegistationCubit extends SimplexCubit<RegistrationState> {
     emit(state.copyWith(showRepeatPassword: !state.showRepeatPassword));
   }
 
+  void onFirstNameChange({required String firstName}) {
+    emit(
+      state.copyWith(
+        firstName: state.firstName.update(
+          value: firstName.trim(),
+          isValid: ValidationHelper.nameFieldValidation(firstName, 'First Name') == null,
+          errorMessage: ValidationHelper.nameFieldValidation(firstName, 'First Name'),
+        ),
+      ),
+    );
+  }
+
+  void onLastNameChange({required String lastName}) {
+    emit(
+      state.copyWith(
+        lastName: state.lastName.update(
+          value: lastName.trim(),
+          isValid: ValidationHelper.nameFieldValidation(lastName, 'Last Name') == null,
+          errorMessage: ValidationHelper.nameFieldValidation(lastName, 'Last Name'),
+        ),
+      ),
+    );
+  }
+
   Future<void> registerWithEmail({
     bool fromChangeEmail = false,
     bool fromUnverifiedEmail = false,
     String? password,
     String? email,
+    String? firstName,
+    String? lastName,
   }) async {
     bool _isValid = fromUnverifiedEmail
         ? true
         : fromChangeEmail
         ? state.email.isValid
-        : state.email.isValid && state.password.isValid;
+        : state.email.isValid && state.password.isValid && state.firstName.isValid && state.lastName.isValid;
     if (_isValid) {
       emit(state.copyWith(registerStatus: const BlocStatus.loading()));
       await handleAPICall(
         call: _authRepository.registerUser(
           email: email ?? state.email.value.toLowerCase(),
           password: password ?? state.password.value,
+          firstName: firstName ?? state.firstName.value,
+          lastName: lastName ?? state.lastName.value,
         ),
         onSuccess: (RegisterWithEmailModel data) => state.copyWith(
           registerStatus: BlocStatus.success(message: data.message),
@@ -93,6 +121,14 @@ class RegistationCubit extends SimplexCubit<RegistrationState> {
           password: state.password.update(errorMessage: ValidationHelper.passwordValidation(state.password.value)),
           repeatPassword: state.repeatPassword.update(
             errorMessage: ValidationHelper.repeatPasswordValidation(state.password.value, state.repeatPassword.value),
+          ),
+          firstName: state.firstName.update(
+            isValid: ValidationHelper.nameFieldValidation(state.firstName.value, 'First Name') == null,
+            errorMessage: ValidationHelper.nameFieldValidation(state.firstName.value, 'First Name'),
+          ),
+          lastName: state.lastName.update(
+            isValid: ValidationHelper.nameFieldValidation(state.lastName.value, 'Last Name') == null,
+            errorMessage: ValidationHelper.nameFieldValidation(state.lastName.value, 'Last Name'),
           ),
         ),
       );

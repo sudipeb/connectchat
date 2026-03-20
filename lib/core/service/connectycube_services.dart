@@ -1,4 +1,4 @@
-import 'package:connectycube_sdk/connectycube_sdk.dart';
+import 'package:connectycube_sdk/connectycube_sdk.dart' as cc;
 
 class ConnectyCubeService {
   static final instance = ConnectyCubeService._();
@@ -6,18 +6,18 @@ class ConnectyCubeService {
   ConnectyCubeService._();
 
   Future<void> init(String appId, String authKey, String authSecret) async {
-    CubeSettings.instance.isDebugEnabled = true;
-    init(appId, authKey, authSecret);
+    cc.CubeSettings.instance.isDebugEnabled = true;
+    cc.init(appId, authKey, authSecret);
   }
 
-  Future<CubeUser> signUpUser(String login, String password) async {
-    var user = CubeUser(login: login, password: password);
-    return await signUp(user);
+  Future<cc.CubeUser> signUpUser(String login, String password) async {
+    final user = cc.CubeUser(login: login, password: password);
+    return cc.signUp(user);
   }
 
-  Future<CubeUser> loginUser(String login, String password) async {
-    var user = CubeUser(login: login, password: password);
-    var session = await createSession(user);
-    return await CubeChatConnection.instance.login(user..id = session.user!.id);
+  Future<cc.CubeUser> loginUser(String login, String password) async {
+    final user = cc.CubeUser(login: login, password: password);
+    final session = await cc.createSession(user);
+    return cc.CubeChatConnection.instance.login(user..id = session.user!.id);
   }
 }

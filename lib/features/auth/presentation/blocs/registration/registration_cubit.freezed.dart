@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RegistrationState {
 
- Field<String> get email; Field<String> get password; Field<String> get repeatPassword; bool get showPassword; bool get showRepeatPassword; BlocStatus get registerStatus; RegisterWithEmailModel? get resendData;
+ Field<String> get email; Field<String> get password; Field<String> get repeatPassword; Field<String> get firstName; Field<String> get lastName; bool get showPassword; bool get showRepeatPassword; BlocStatus get registerStatus; RegisterWithEmailModel? get resendData;
 /// Create a copy of RegistrationState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $RegistrationStateCopyWith<RegistrationState> get copyWith => _$RegistrationStat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistrationState&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.repeatPassword, repeatPassword) || other.repeatPassword == repeatPassword)&&(identical(other.showPassword, showPassword) || other.showPassword == showPassword)&&(identical(other.showRepeatPassword, showRepeatPassword) || other.showRepeatPassword == showRepeatPassword)&&(identical(other.registerStatus, registerStatus) || other.registerStatus == registerStatus)&&(identical(other.resendData, resendData) || other.resendData == resendData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RegistrationState&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.repeatPassword, repeatPassword) || other.repeatPassword == repeatPassword)&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.showPassword, showPassword) || other.showPassword == showPassword)&&(identical(other.showRepeatPassword, showRepeatPassword) || other.showRepeatPassword == showRepeatPassword)&&(identical(other.registerStatus, registerStatus) || other.registerStatus == registerStatus)&&(identical(other.resendData, resendData) || other.resendData == resendData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,email,password,repeatPassword,showPassword,showRepeatPassword,registerStatus,resendData);
+int get hashCode => Object.hash(runtimeType,email,password,repeatPassword,firstName,lastName,showPassword,showRepeatPassword,registerStatus,resendData);
 
 @override
 String toString() {
-  return 'RegistrationState(email: $email, password: $password, repeatPassword: $repeatPassword, showPassword: $showPassword, showRepeatPassword: $showRepeatPassword, registerStatus: $registerStatus, resendData: $resendData)';
+  return 'RegistrationState(email: $email, password: $password, repeatPassword: $repeatPassword, firstName: $firstName, lastName: $lastName, showPassword: $showPassword, showRepeatPassword: $showRepeatPassword, registerStatus: $registerStatus, resendData: $resendData)';
 }
 
 
@@ -45,7 +45,7 @@ abstract mixin class $RegistrationStateCopyWith<$Res>  {
   factory $RegistrationStateCopyWith(RegistrationState value, $Res Function(RegistrationState) _then) = _$RegistrationStateCopyWithImpl;
 @useResult
 $Res call({
- Field<String> email, Field<String> password, Field<String> repeatPassword, bool showPassword, bool showRepeatPassword, BlocStatus registerStatus, RegisterWithEmailModel? resendData
+ Field<String> email, Field<String> password, Field<String> repeatPassword, Field<String> firstName, Field<String> lastName, bool showPassword, bool showRepeatPassword, BlocStatus registerStatus, RegisterWithEmailModel? resendData
 });
 
 
@@ -62,11 +62,13 @@ class _$RegistrationStateCopyWithImpl<$Res>
 
 /// Create a copy of RegistrationState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? email = null,Object? password = null,Object? repeatPassword = null,Object? showPassword = null,Object? showRepeatPassword = null,Object? registerStatus = null,Object? resendData = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? email = null,Object? password = null,Object? repeatPassword = null,Object? firstName = null,Object? lastName = null,Object? showPassword = null,Object? showRepeatPassword = null,Object? registerStatus = null,Object? resendData = freezed,}) {
   return _then(_self.copyWith(
 email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as Field<String>,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
 as Field<String>,repeatPassword: null == repeatPassword ? _self.repeatPassword : repeatPassword // ignore: cast_nullable_to_non_nullable
+as Field<String>,firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
+as Field<String>,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as Field<String>,showPassword: null == showPassword ? _self.showPassword : showPassword // ignore: cast_nullable_to_non_nullable
 as bool,showRepeatPassword: null == showRepeatPassword ? _self.showRepeatPassword : showRepeatPassword // ignore: cast_nullable_to_non_nullable
 as bool,registerStatus: null == registerStatus ? _self.registerStatus : registerStatus // ignore: cast_nullable_to_non_nullable
@@ -177,10 +179,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  Field<String> firstName,  Field<String> lastName,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _RegistrationState() when $default != null:
-return $default(_that.email,_that.password,_that.repeatPassword,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
+return $default(_that.email,_that.password,_that.repeatPassword,_that.firstName,_that.lastName,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
   return orElse();
 
 }
@@ -198,10 +200,10 @@ return $default(_that.email,_that.password,_that.repeatPassword,_that.showPasswo
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  Field<String> firstName,  Field<String> lastName,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)  $default,) {final _that = this;
 switch (_that) {
 case _RegistrationState():
-return $default(_that.email,_that.password,_that.repeatPassword,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
+return $default(_that.email,_that.password,_that.repeatPassword,_that.firstName,_that.lastName,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -218,10 +220,10 @@ return $default(_that.email,_that.password,_that.repeatPassword,_that.showPasswo
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Field<String> email,  Field<String> password,  Field<String> repeatPassword,  Field<String> firstName,  Field<String> lastName,  bool showPassword,  bool showRepeatPassword,  BlocStatus registerStatus,  RegisterWithEmailModel? resendData)?  $default,) {final _that = this;
 switch (_that) {
 case _RegistrationState() when $default != null:
-return $default(_that.email,_that.password,_that.repeatPassword,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
+return $default(_that.email,_that.password,_that.repeatPassword,_that.firstName,_that.lastName,_that.showPassword,_that.showRepeatPassword,_that.registerStatus,_that.resendData);case _:
   return null;
 
 }
@@ -233,12 +235,14 @@ return $default(_that.email,_that.password,_that.repeatPassword,_that.showPasswo
 
 
 class _RegistrationState extends RegistrationState {
-  const _RegistrationState({required this.email, required this.password, required this.repeatPassword, required this.showPassword, required this.showRepeatPassword, required this.registerStatus, required this.resendData}): super._();
+  const _RegistrationState({required this.email, required this.password, required this.repeatPassword, required this.firstName, required this.lastName, required this.showPassword, required this.showRepeatPassword, required this.registerStatus, required this.resendData}): super._();
   
 
 @override final  Field<String> email;
 @override final  Field<String> password;
 @override final  Field<String> repeatPassword;
+@override final  Field<String> firstName;
+@override final  Field<String> lastName;
 @override final  bool showPassword;
 @override final  bool showRepeatPassword;
 @override final  BlocStatus registerStatus;
@@ -254,16 +258,16 @@ _$RegistrationStateCopyWith<_RegistrationState> get copyWith => __$RegistrationS
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RegistrationState&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.repeatPassword, repeatPassword) || other.repeatPassword == repeatPassword)&&(identical(other.showPassword, showPassword) || other.showPassword == showPassword)&&(identical(other.showRepeatPassword, showRepeatPassword) || other.showRepeatPassword == showRepeatPassword)&&(identical(other.registerStatus, registerStatus) || other.registerStatus == registerStatus)&&(identical(other.resendData, resendData) || other.resendData == resendData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RegistrationState&&(identical(other.email, email) || other.email == email)&&(identical(other.password, password) || other.password == password)&&(identical(other.repeatPassword, repeatPassword) || other.repeatPassword == repeatPassword)&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.showPassword, showPassword) || other.showPassword == showPassword)&&(identical(other.showRepeatPassword, showRepeatPassword) || other.showRepeatPassword == showRepeatPassword)&&(identical(other.registerStatus, registerStatus) || other.registerStatus == registerStatus)&&(identical(other.resendData, resendData) || other.resendData == resendData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,email,password,repeatPassword,showPassword,showRepeatPassword,registerStatus,resendData);
+int get hashCode => Object.hash(runtimeType,email,password,repeatPassword,firstName,lastName,showPassword,showRepeatPassword,registerStatus,resendData);
 
 @override
 String toString() {
-  return 'RegistrationState(email: $email, password: $password, repeatPassword: $repeatPassword, showPassword: $showPassword, showRepeatPassword: $showRepeatPassword, registerStatus: $registerStatus, resendData: $resendData)';
+  return 'RegistrationState(email: $email, password: $password, repeatPassword: $repeatPassword, firstName: $firstName, lastName: $lastName, showPassword: $showPassword, showRepeatPassword: $showRepeatPassword, registerStatus: $registerStatus, resendData: $resendData)';
 }
 
 
@@ -274,7 +278,7 @@ abstract mixin class _$RegistrationStateCopyWith<$Res> implements $RegistrationS
   factory _$RegistrationStateCopyWith(_RegistrationState value, $Res Function(_RegistrationState) _then) = __$RegistrationStateCopyWithImpl;
 @override @useResult
 $Res call({
- Field<String> email, Field<String> password, Field<String> repeatPassword, bool showPassword, bool showRepeatPassword, BlocStatus registerStatus, RegisterWithEmailModel? resendData
+ Field<String> email, Field<String> password, Field<String> repeatPassword, Field<String> firstName, Field<String> lastName, bool showPassword, bool showRepeatPassword, BlocStatus registerStatus, RegisterWithEmailModel? resendData
 });
 
 
@@ -291,11 +295,13 @@ class __$RegistrationStateCopyWithImpl<$Res>
 
 /// Create a copy of RegistrationState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? email = null,Object? password = null,Object? repeatPassword = null,Object? showPassword = null,Object? showRepeatPassword = null,Object? registerStatus = null,Object? resendData = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? email = null,Object? password = null,Object? repeatPassword = null,Object? firstName = null,Object? lastName = null,Object? showPassword = null,Object? showRepeatPassword = null,Object? registerStatus = null,Object? resendData = freezed,}) {
   return _then(_RegistrationState(
 email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
 as Field<String>,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
 as Field<String>,repeatPassword: null == repeatPassword ? _self.repeatPassword : repeatPassword // ignore: cast_nullable_to_non_nullable
+as Field<String>,firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
+as Field<String>,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as Field<String>,showPassword: null == showPassword ? _self.showPassword : showPassword // ignore: cast_nullable_to_non_nullable
 as bool,showRepeatPassword: null == showRepeatPassword ? _self.showRepeatPassword : showRepeatPassword // ignore: cast_nullable_to_non_nullable
 as bool,registerStatus: null == registerStatus ? _self.registerStatus : registerStatus // ignore: cast_nullable_to_non_nullable
