@@ -1,0 +1,15 @@
+# Specify where your schema is located
+schema: schema.graphql
+
+# Define documents (your queries, mutations, subscriptions)
+documents:
+  - "lib/**/*.graphql"
+  - "lib/**/*.gql"
+
+extensions:
+  endpoints:
+    dev:
+      url: https://want-verified-eden-rated.trycloudflare.com/api
+      headers:
+        user-agent: JS GraphQL
+      introspect: false
