@@ -54,9 +54,7 @@ class LoginCubit extends SimplexCubit<LoginState> {
         response.fold(
           (error) => emit(
             state.copyWith(
-              loginStatus: error.mapErrorMessage(
-                (String message) => BlocStatus.error(error: message),
-              ),
+              loginStatus: error.mapErrorMessage((String message) => BlocStatus.error(error: message)),
               loginResponse: null,
             ),
           ),
@@ -68,12 +66,7 @@ class LoginCubit extends SimplexCubit<LoginState> {
           ),
         );
       } catch (error) {
-        emit(
-          state.copyWith(
-            loginStatus: BlocStatus.error(error: error.toString()),
-            loginResponse: null,
-          ),
-        );
+        emit(state.copyWith(loginStatus: BlocStatus.error(error: error.toString()), loginResponse: null));
       }
     } else {
       emit(
