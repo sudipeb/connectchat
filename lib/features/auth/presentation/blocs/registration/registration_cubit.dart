@@ -1,5 +1,3 @@
- 
-
 import 'package:connectchat/core/helper/form_validation_helper.dart';
 import 'package:connectchat/features/auth/domain/repository/auth_repository.dart';
 import 'package:connectchat/features/auth/data/models/register_with_email_model.dart';
@@ -11,10 +9,10 @@ part 'registration_cubit.freezed.dart';
 part 'registration_state.dart';
 
 @injectable
-class RegistationCubit extends SimplexCubit<RegistrationState>{
+class RegistationCubit extends SimplexCubit<RegistrationState> {
   RegistationCubit(this._authRepository) : super(RegistrationState.initial());
   final AuthRepository _authRepository;
-void onEmailChange({required String email}) {
+  void onEmailChange({required String email}) {
     emit(
       state.copyWith(
         email: state.email.update(
@@ -57,6 +55,7 @@ void onEmailChange({required String email}) {
   void toggleRepeatPassword() {
     emit(state.copyWith(showRepeatPassword: !state.showRepeatPassword));
   }
+
   Future<void> registerWithEmail({
     bool fromChangeEmail = false,
     bool fromUnverifiedEmail = false,
@@ -101,5 +100,4 @@ void onEmailChange({required String email}) {
       );
     }
   }
-
 }
