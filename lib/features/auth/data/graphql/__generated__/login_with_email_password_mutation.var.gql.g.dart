@@ -21,15 +21,10 @@ class _$GLoginVarsSerializer implements StructuredSerializer<GLoginVars> {
     FullType specifiedType = FullType.unspecified,
   }) {
     final result = <Object?>[
-      'email',
+      'body',
       serializers.serialize(
-        object.email,
-        specifiedType: const FullType(String),
-      ),
-      'password',
-      serializers.serialize(
-        object.password,
-        specifiedType: const FullType(String),
+        object.body,
+        specifiedType: const FullType(_i1.GLoginUserDto),
       ),
     ];
 
@@ -50,21 +45,14 @@ class _$GLoginVarsSerializer implements StructuredSerializer<GLoginVars> {
       iterator.moveNext();
       final Object? value = iterator.current;
       switch (key) {
-        case 'email':
-          result.email =
-              serializers.deserialize(
-                    value,
-                    specifiedType: const FullType(String),
-                  )!
-                  as String;
-          break;
-        case 'password':
-          result.password =
-              serializers.deserialize(
-                    value,
-                    specifiedType: const FullType(String),
-                  )!
-                  as String;
+        case 'body':
+          result.body.replace(
+            serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(_i1.GLoginUserDto),
+                )!
+                as _i1.GLoginUserDto,
+          );
           break;
       }
     }
@@ -75,14 +63,12 @@ class _$GLoginVarsSerializer implements StructuredSerializer<GLoginVars> {
 
 class _$GLoginVars extends GLoginVars {
   @override
-  final String email;
-  @override
-  final String password;
+  final _i1.GLoginUserDto body;
 
   factory _$GLoginVars([void Function(GLoginVarsBuilder)? updates]) =>
       (GLoginVarsBuilder()..update(updates))._build();
 
-  _$GLoginVars._({required this.email, required this.password}) : super._();
+  _$GLoginVars._({required this.body}) : super._();
   @override
   GLoginVars rebuild(void Function(GLoginVarsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
@@ -93,47 +79,39 @@ class _$GLoginVars extends GLoginVars {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GLoginVars &&
-        email == other.email &&
-        password == other.password;
+    return other is GLoginVars && body == other.body;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, email.hashCode);
-    _$hash = $jc(_$hash, password.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'GLoginVars')
-          ..add('email', email)
-          ..add('password', password))
-        .toString();
+    return (newBuiltValueToStringHelper(
+      r'GLoginVars',
+    )..add('body', body)).toString();
   }
 }
 
 class GLoginVarsBuilder implements Builder<GLoginVars, GLoginVarsBuilder> {
   _$GLoginVars? _$v;
 
-  String? _email;
-  String? get email => _$this._email;
-  set email(String? email) => _$this._email = email;
-
-  String? _password;
-  String? get password => _$this._password;
-  set password(String? password) => _$this._password = password;
+  _i1.GLoginUserDtoBuilder? _body;
+  _i1.GLoginUserDtoBuilder get body =>
+      _$this._body ??= _i1.GLoginUserDtoBuilder();
+  set body(_i1.GLoginUserDtoBuilder? body) => _$this._body = body;
 
   GLoginVarsBuilder();
 
   GLoginVarsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _email = $v.email;
-      _password = $v.password;
+      _body = $v.body.toBuilder();
       _$v = null;
     }
     return this;
@@ -153,20 +131,23 @@ class GLoginVarsBuilder implements Builder<GLoginVars, GLoginVarsBuilder> {
   GLoginVars build() => _build();
 
   _$GLoginVars _build() {
-    final _$result =
-        _$v ??
-        _$GLoginVars._(
-          email: BuiltValueNullFieldError.checkNotNull(
-            email,
-            r'GLoginVars',
-            'email',
-          ),
-          password: BuiltValueNullFieldError.checkNotNull(
-            password,
-            r'GLoginVars',
-            'password',
-          ),
+    _$GLoginVars _$result;
+    try {
+      _$result = _$v ?? _$GLoginVars._(body: body.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'body';
+        body.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+          r'GLoginVars',
+          _$failedField,
+          e.toString(),
         );
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

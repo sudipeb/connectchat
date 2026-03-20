@@ -104,6 +104,22 @@ class _$GLoginData_loginSerializer
       ),
     ];
     Object? value;
+    value = object.ccUserId;
+    if (value != null) {
+      result
+        ..add('ccUserId')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(double)),
+        );
+    }
+    value = object.connectySession;
+    if (value != null) {
+      result
+        ..add('connectySession')
+        ..add(
+          serializers.serialize(value, specifiedType: const FullType(String)),
+        );
+    }
     value = object.token;
     if (value != null) {
       result
@@ -147,6 +163,22 @@ class _$GLoginData_loginSerializer
                     specifiedType: const FullType(String),
                   )!
                   as String;
+          break;
+        case 'ccUserId':
+          result.ccUserId =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(double),
+                  )
+                  as double?;
+          break;
+        case 'connectySession':
+          result.connectySession =
+              serializers.deserialize(
+                    value,
+                    specifiedType: const FullType(String),
+                  )
+                  as String?;
           break;
         case 'message':
           result.message =
@@ -403,6 +435,10 @@ class _$GLoginData_login extends GLoginData_login {
   @override
   final String G__typename;
   @override
+  final double? ccUserId;
+  @override
+  final String? connectySession;
+  @override
   final String message;
   @override
   final String? token;
@@ -415,6 +451,8 @@ class _$GLoginData_login extends GLoginData_login {
 
   _$GLoginData_login._({
     required this.G__typename,
+    this.ccUserId,
+    this.connectySession,
     required this.message,
     this.token,
     this.user,
@@ -432,6 +470,8 @@ class _$GLoginData_login extends GLoginData_login {
     if (identical(other, this)) return true;
     return other is GLoginData_login &&
         G__typename == other.G__typename &&
+        ccUserId == other.ccUserId &&
+        connectySession == other.connectySession &&
         message == other.message &&
         token == other.token &&
         user == other.user;
@@ -441,6 +481,8 @@ class _$GLoginData_login extends GLoginData_login {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, ccUserId.hashCode);
+    _$hash = $jc(_$hash, connectySession.hashCode);
     _$hash = $jc(_$hash, message.hashCode);
     _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, user.hashCode);
@@ -452,6 +494,8 @@ class _$GLoginData_login extends GLoginData_login {
   String toString() {
     return (newBuiltValueToStringHelper(r'GLoginData_login')
           ..add('G__typename', G__typename)
+          ..add('ccUserId', ccUserId)
+          ..add('connectySession', connectySession)
           ..add('message', message)
           ..add('token', token)
           ..add('user', user))
@@ -466,6 +510,15 @@ class GLoginData_loginBuilder
   String? _G__typename;
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  double? _ccUserId;
+  double? get ccUserId => _$this._ccUserId;
+  set ccUserId(double? ccUserId) => _$this._ccUserId = ccUserId;
+
+  String? _connectySession;
+  String? get connectySession => _$this._connectySession;
+  set connectySession(String? connectySession) =>
+      _$this._connectySession = connectySession;
 
   String? _message;
   String? get message => _$this._message;
@@ -488,6 +541,8 @@ class GLoginData_loginBuilder
     final $v = _$v;
     if ($v != null) {
       _G__typename = $v.G__typename;
+      _ccUserId = $v.ccUserId;
+      _connectySession = $v.connectySession;
       _message = $v.message;
       _token = $v.token;
       _user = $v.user?.toBuilder();
@@ -520,6 +575,8 @@ class GLoginData_loginBuilder
               r'GLoginData_login',
               'G__typename',
             ),
+            ccUserId: ccUserId,
+            connectySession: connectySession,
             message: BuiltValueNullFieldError.checkNotNull(
               message,
               r'GLoginData_login',

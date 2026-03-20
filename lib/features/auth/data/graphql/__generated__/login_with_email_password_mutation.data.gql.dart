@@ -46,6 +46,8 @@ abstract class GLoginData_login
 
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
+  double? get ccUserId;
+  String? get connectySession;
   String get message;
   String? get token;
   GLoginData_login_user? get user;

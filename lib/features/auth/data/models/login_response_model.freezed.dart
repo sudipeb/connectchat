@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$LoginResponseModel {
 
- String? get message; Token? get token; User? get user;
+ double? get ccUserId; String? get connectySession; String? get message; Token? get token; User? get user;
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $LoginResponseModelCopyWith<LoginResponseModel> get copyWith => _$LoginResponseM
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LoginResponseModel&&(identical(other.ccUserId, ccUserId) || other.ccUserId == ccUserId)&&(identical(other.connectySession, connectySession) || other.connectySession == connectySession)&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,message,token,user);
+int get hashCode => Object.hash(runtimeType,ccUserId,connectySession,message,token,user);
 
 @override
 String toString() {
-  return 'LoginResponseModel(message: $message, token: $token, user: $user)';
+  return 'LoginResponseModel(ccUserId: $ccUserId, connectySession: $connectySession, message: $message, token: $token, user: $user)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $LoginResponseModelCopyWith<$Res>  {
   factory $LoginResponseModelCopyWith(LoginResponseModel value, $Res Function(LoginResponseModel) _then) = _$LoginResponseModelCopyWithImpl;
 @useResult
 $Res call({
- String? message, Token? token, User? user
+ double? ccUserId, String? connectySession, String? message, Token? token, User? user
 });
 
 
@@ -65,9 +65,11 @@ class _$LoginResponseModelCopyWithImpl<$Res>
 
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? ccUserId = freezed,Object? connectySession = freezed,Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
   return _then(_self.copyWith(
-message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+ccUserId: freezed == ccUserId ? _self.ccUserId : ccUserId // ignore: cast_nullable_to_non_nullable
+as double?,connectySession: freezed == connectySession ? _self.connectySession : connectySession // ignore: cast_nullable_to_non_nullable
+as String?,message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String?,token: freezed == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as Token?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as User?,
@@ -179,10 +181,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? message,  Token? token,  User? user)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( double? ccUserId,  String? connectySession,  String? message,  Token? token,  User? user)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _LoginResponseModel() when $default != null:
-return $default(_that.message,_that.token,_that.user);case _:
+return $default(_that.ccUserId,_that.connectySession,_that.message,_that.token,_that.user);case _:
   return orElse();
 
 }
@@ -200,10 +202,10 @@ return $default(_that.message,_that.token,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? message,  Token? token,  User? user)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( double? ccUserId,  String? connectySession,  String? message,  Token? token,  User? user)  $default,) {final _that = this;
 switch (_that) {
 case _LoginResponseModel():
-return $default(_that.message,_that.token,_that.user);case _:
+return $default(_that.ccUserId,_that.connectySession,_that.message,_that.token,_that.user);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -220,10 +222,10 @@ return $default(_that.message,_that.token,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? message,  Token? token,  User? user)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( double? ccUserId,  String? connectySession,  String? message,  Token? token,  User? user)?  $default,) {final _that = this;
 switch (_that) {
 case _LoginResponseModel() when $default != null:
-return $default(_that.message,_that.token,_that.user);case _:
+return $default(_that.ccUserId,_that.connectySession,_that.message,_that.token,_that.user);case _:
   return null;
 
 }
@@ -235,9 +237,11 @@ return $default(_that.message,_that.token,_that.user);case _:
 @JsonSerializable()
 
 class _LoginResponseModel implements LoginResponseModel {
-  const _LoginResponseModel({this.message, this.token, this.user});
+  const _LoginResponseModel({this.ccUserId, this.connectySession, this.message, this.token, this.user});
   factory _LoginResponseModel.fromJson(Map<String, dynamic> json) => _$LoginResponseModelFromJson(json);
 
+@override final  double? ccUserId;
+@override final  String? connectySession;
 @override final  String? message;
 @override final  Token? token;
 @override final  User? user;
@@ -255,16 +259,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LoginResponseModel&&(identical(other.ccUserId, ccUserId) || other.ccUserId == ccUserId)&&(identical(other.connectySession, connectySession) || other.connectySession == connectySession)&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,message,token,user);
+int get hashCode => Object.hash(runtimeType,ccUserId,connectySession,message,token,user);
 
 @override
 String toString() {
-  return 'LoginResponseModel(message: $message, token: $token, user: $user)';
+  return 'LoginResponseModel(ccUserId: $ccUserId, connectySession: $connectySession, message: $message, token: $token, user: $user)';
 }
 
 
@@ -275,7 +279,7 @@ abstract mixin class _$LoginResponseModelCopyWith<$Res> implements $LoginRespons
   factory _$LoginResponseModelCopyWith(_LoginResponseModel value, $Res Function(_LoginResponseModel) _then) = __$LoginResponseModelCopyWithImpl;
 @override @useResult
 $Res call({
- String? message, Token? token, User? user
+ double? ccUserId, String? connectySession, String? message, Token? token, User? user
 });
 
 
@@ -292,9 +296,11 @@ class __$LoginResponseModelCopyWithImpl<$Res>
 
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? ccUserId = freezed,Object? connectySession = freezed,Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
   return _then(_LoginResponseModel(
-message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+ccUserId: freezed == ccUserId ? _self.ccUserId : ccUserId // ignore: cast_nullable_to_non_nullable
+as double?,connectySession: freezed == connectySession ? _self.connectySession : connectySession // ignore: cast_nullable_to_non_nullable
+as String?,message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String?,token: freezed == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as Token?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as User?,
@@ -595,7 +601,7 @@ as String?,
 /// @nodoc
 mixin _$User {
 
-@JsonKey(name: '_id') String? get id; String? get email; String? get firstName; String? get lastName;
+ String? get id; String? get email; String? get firstName; String? get lastName;
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -628,7 +634,7 @@ abstract mixin class $UserCopyWith<$Res>  {
   factory $UserCopyWith(User value, $Res Function(User) _then) = _$UserCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: '_id') String? id, String? email, String? firstName, String? lastName
+ String? id, String? email, String? firstName, String? lastName
 });
 
 
@@ -736,7 +742,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? id,  String? email,  String? firstName,  String? lastName)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _User() when $default != null:
 return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
@@ -757,7 +763,7 @@ return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? id,  String? email,  String? firstName,  String? lastName)  $default,) {final _that = this;
 switch (_that) {
 case _User():
 return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
@@ -777,7 +783,7 @@ return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? id,  String? email,  String? firstName,  String? lastName)?  $default,) {final _that = this;
 switch (_that) {
 case _User() when $default != null:
 return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
@@ -792,10 +798,10 @@ return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
 @JsonSerializable()
 
 class _User implements User {
-  const _User({@JsonKey(name: '_id') this.id, this.email, this.firstName, this.lastName});
+  const _User({this.id, this.email, this.firstName, this.lastName});
   factory _User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
-@override@JsonKey(name: '_id') final  String? id;
+@override final  String? id;
 @override final  String? email;
 @override final  String? firstName;
 @override final  String? lastName;
@@ -833,7 +839,7 @@ abstract mixin class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) _then) = __$UserCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: '_id') String? id, String? email, String? firstName, String? lastName
+ String? id, String? email, String? firstName, String? lastName
 });
 
 

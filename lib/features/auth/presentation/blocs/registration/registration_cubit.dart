@@ -69,12 +69,10 @@ class RegistationCubit extends SimplexCubit<RegistrationState> {
         : state.email.isValid && state.password.isValid;
     if (_isValid) {
       emit(state.copyWith(registerStatus: const BlocStatus.loading()));
-      final String deviceId = DateTime.now().millisecondsSinceEpoch.toString();
       await handleAPICall(
         call: _authRepository.registerUser(
           email: email ?? state.email.value.toLowerCase(),
           password: password ?? state.password.value,
-          deviceId: deviceId,
         ),
         onSuccess: (RegisterWithEmailModel data) => state.copyWith(
           registerStatus: BlocStatus.success(message: data.message),
