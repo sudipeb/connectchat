@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$LoginResponseModel {
 
- String? get message; String? get expiry; Token? get token; User? get user;
+ String? get message; Token? get token; User? get user;
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $LoginResponseModelCopyWith<LoginResponseModel> get copyWith => _$LoginResponseM
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.expiry, expiry) || other.expiry == expiry)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,message,expiry,token,user);
+int get hashCode => Object.hash(runtimeType,message,token,user);
 
 @override
 String toString() {
-  return 'LoginResponseModel(message: $message, expiry: $expiry, token: $token, user: $user)';
+  return 'LoginResponseModel(message: $message, token: $token, user: $user)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $LoginResponseModelCopyWith<$Res>  {
   factory $LoginResponseModelCopyWith(LoginResponseModel value, $Res Function(LoginResponseModel) _then) = _$LoginResponseModelCopyWithImpl;
 @useResult
 $Res call({
- String? message, String? expiry, Token? token, User? user
+ String? message, Token? token, User? user
 });
 
 
@@ -65,10 +65,9 @@ class _$LoginResponseModelCopyWithImpl<$Res>
 
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? message = freezed,Object? expiry = freezed,Object? token = freezed,Object? user = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
   return _then(_self.copyWith(
 message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
-as String?,expiry: freezed == expiry ? _self.expiry : expiry // ignore: cast_nullable_to_non_nullable
 as String?,token: freezed == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as Token?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as User?,
@@ -180,10 +179,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? message,  String? expiry,  Token? token,  User? user)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? message,  Token? token,  User? user)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _LoginResponseModel() when $default != null:
-return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
+return $default(_that.message,_that.token,_that.user);case _:
   return orElse();
 
 }
@@ -201,10 +200,10 @@ return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? message,  String? expiry,  Token? token,  User? user)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? message,  Token? token,  User? user)  $default,) {final _that = this;
 switch (_that) {
 case _LoginResponseModel():
-return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
+return $default(_that.message,_that.token,_that.user);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -221,10 +220,10 @@ return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? message,  String? expiry,  Token? token,  User? user)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? message,  Token? token,  User? user)?  $default,) {final _that = this;
 switch (_that) {
 case _LoginResponseModel() when $default != null:
-return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
+return $default(_that.message,_that.token,_that.user);case _:
   return null;
 
 }
@@ -236,11 +235,10 @@ return $default(_that.message,_that.expiry,_that.token,_that.user);case _:
 @JsonSerializable()
 
 class _LoginResponseModel implements LoginResponseModel {
-  const _LoginResponseModel({this.message, this.expiry, this.token, this.user});
+  const _LoginResponseModel({this.message, this.token, this.user});
   factory _LoginResponseModel.fromJson(Map<String, dynamic> json) => _$LoginResponseModelFromJson(json);
 
 @override final  String? message;
-@override final  String? expiry;
 @override final  Token? token;
 @override final  User? user;
 
@@ -257,16 +255,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.expiry, expiry) || other.expiry == expiry)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LoginResponseModel&&(identical(other.message, message) || other.message == message)&&(identical(other.token, token) || other.token == token)&&(identical(other.user, user) || other.user == user));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,message,expiry,token,user);
+int get hashCode => Object.hash(runtimeType,message,token,user);
 
 @override
 String toString() {
-  return 'LoginResponseModel(message: $message, expiry: $expiry, token: $token, user: $user)';
+  return 'LoginResponseModel(message: $message, token: $token, user: $user)';
 }
 
 
@@ -277,7 +275,7 @@ abstract mixin class _$LoginResponseModelCopyWith<$Res> implements $LoginRespons
   factory _$LoginResponseModelCopyWith(_LoginResponseModel value, $Res Function(_LoginResponseModel) _then) = __$LoginResponseModelCopyWithImpl;
 @override @useResult
 $Res call({
- String? message, String? expiry, Token? token, User? user
+ String? message, Token? token, User? user
 });
 
 
@@ -294,10 +292,9 @@ class __$LoginResponseModelCopyWithImpl<$Res>
 
 /// Create a copy of LoginResponseModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? message = freezed,Object? expiry = freezed,Object? token = freezed,Object? user = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? message = freezed,Object? token = freezed,Object? user = freezed,}) {
   return _then(_LoginResponseModel(
 message: freezed == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
-as String?,expiry: freezed == expiry ? _self.expiry : expiry // ignore: cast_nullable_to_non_nullable
 as String?,token: freezed == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as Token?,user: freezed == user ? _self.user : user // ignore: cast_nullable_to_non_nullable
 as User?,
@@ -335,7 +332,7 @@ $UserCopyWith<$Res>? get user {
 /// @nodoc
 mixin _$Token {
 
- String? get accessToken; DateTime? get accessTokenExpiresIn; String? get refreshToken; DateTime? get refreshTokenExpiresIn;
+ String? get bearerToken;
 /// Create a copy of Token
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -348,16 +345,16 @@ $TokenCopyWith<Token> get copyWith => _$TokenCopyWithImpl<Token>(this as Token, 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Token&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.accessTokenExpiresIn, accessTokenExpiresIn) || other.accessTokenExpiresIn == accessTokenExpiresIn)&&(identical(other.refreshToken, refreshToken) || other.refreshToken == refreshToken)&&(identical(other.refreshTokenExpiresIn, refreshTokenExpiresIn) || other.refreshTokenExpiresIn == refreshTokenExpiresIn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Token&&(identical(other.bearerToken, bearerToken) || other.bearerToken == bearerToken));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,accessToken,accessTokenExpiresIn,refreshToken,refreshTokenExpiresIn);
+int get hashCode => Object.hash(runtimeType,bearerToken);
 
 @override
 String toString() {
-  return 'Token(accessToken: $accessToken, accessTokenExpiresIn: $accessTokenExpiresIn, refreshToken: $refreshToken, refreshTokenExpiresIn: $refreshTokenExpiresIn)';
+  return 'Token(bearerToken: $bearerToken)';
 }
 
 
@@ -368,7 +365,7 @@ abstract mixin class $TokenCopyWith<$Res>  {
   factory $TokenCopyWith(Token value, $Res Function(Token) _then) = _$TokenCopyWithImpl;
 @useResult
 $Res call({
- String? accessToken, DateTime? accessTokenExpiresIn, String? refreshToken, DateTime? refreshTokenExpiresIn
+ String? bearerToken
 });
 
 
@@ -385,13 +382,10 @@ class _$TokenCopyWithImpl<$Res>
 
 /// Create a copy of Token
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? accessToken = freezed,Object? accessTokenExpiresIn = freezed,Object? refreshToken = freezed,Object? refreshTokenExpiresIn = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? bearerToken = freezed,}) {
   return _then(_self.copyWith(
-accessToken: freezed == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
-as String?,accessTokenExpiresIn: freezed == accessTokenExpiresIn ? _self.accessTokenExpiresIn : accessTokenExpiresIn // ignore: cast_nullable_to_non_nullable
-as DateTime?,refreshToken: freezed == refreshToken ? _self.refreshToken : refreshToken // ignore: cast_nullable_to_non_nullable
-as String?,refreshTokenExpiresIn: freezed == refreshTokenExpiresIn ? _self.refreshTokenExpiresIn : refreshTokenExpiresIn // ignore: cast_nullable_to_non_nullable
-as DateTime?,
+bearerToken: freezed == bearerToken ? _self.bearerToken : bearerToken // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -476,10 +470,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? accessToken,  DateTime? accessTokenExpiresIn,  String? refreshToken,  DateTime? refreshTokenExpiresIn)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? bearerToken)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Token() when $default != null:
-return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,_that.refreshTokenExpiresIn);case _:
+return $default(_that.bearerToken);case _:
   return orElse();
 
 }
@@ -497,10 +491,10 @@ return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? accessToken,  DateTime? accessTokenExpiresIn,  String? refreshToken,  DateTime? refreshTokenExpiresIn)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? bearerToken)  $default,) {final _that = this;
 switch (_that) {
 case _Token():
-return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,_that.refreshTokenExpiresIn);case _:
+return $default(_that.bearerToken);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -517,10 +511,10 @@ return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? accessToken,  DateTime? accessTokenExpiresIn,  String? refreshToken,  DateTime? refreshTokenExpiresIn)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? bearerToken)?  $default,) {final _that = this;
 switch (_that) {
 case _Token() when $default != null:
-return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,_that.refreshTokenExpiresIn);case _:
+return $default(_that.bearerToken);case _:
   return null;
 
 }
@@ -532,13 +526,10 @@ return $default(_that.accessToken,_that.accessTokenExpiresIn,_that.refreshToken,
 @JsonSerializable()
 
 class _Token implements Token {
-  const _Token({this.accessToken, this.accessTokenExpiresIn, this.refreshToken, this.refreshTokenExpiresIn});
+  const _Token({this.bearerToken});
   factory _Token.fromJson(Map<String, dynamic> json) => _$TokenFromJson(json);
 
-@override final  String? accessToken;
-@override final  DateTime? accessTokenExpiresIn;
-@override final  String? refreshToken;
-@override final  DateTime? refreshTokenExpiresIn;
+@override final  String? bearerToken;
 
 /// Create a copy of Token
 /// with the given fields replaced by the non-null parameter values.
@@ -553,16 +544,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Token&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.accessTokenExpiresIn, accessTokenExpiresIn) || other.accessTokenExpiresIn == accessTokenExpiresIn)&&(identical(other.refreshToken, refreshToken) || other.refreshToken == refreshToken)&&(identical(other.refreshTokenExpiresIn, refreshTokenExpiresIn) || other.refreshTokenExpiresIn == refreshTokenExpiresIn));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Token&&(identical(other.bearerToken, bearerToken) || other.bearerToken == bearerToken));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,accessToken,accessTokenExpiresIn,refreshToken,refreshTokenExpiresIn);
+int get hashCode => Object.hash(runtimeType,bearerToken);
 
 @override
 String toString() {
-  return 'Token(accessToken: $accessToken, accessTokenExpiresIn: $accessTokenExpiresIn, refreshToken: $refreshToken, refreshTokenExpiresIn: $refreshTokenExpiresIn)';
+  return 'Token(bearerToken: $bearerToken)';
 }
 
 
@@ -573,7 +564,7 @@ abstract mixin class _$TokenCopyWith<$Res> implements $TokenCopyWith<$Res> {
   factory _$TokenCopyWith(_Token value, $Res Function(_Token) _then) = __$TokenCopyWithImpl;
 @override @useResult
 $Res call({
- String? accessToken, DateTime? accessTokenExpiresIn, String? refreshToken, DateTime? refreshTokenExpiresIn
+ String? bearerToken
 });
 
 
@@ -590,13 +581,10 @@ class __$TokenCopyWithImpl<$Res>
 
 /// Create a copy of Token
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? accessToken = freezed,Object? accessTokenExpiresIn = freezed,Object? refreshToken = freezed,Object? refreshTokenExpiresIn = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? bearerToken = freezed,}) {
   return _then(_Token(
-accessToken: freezed == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
-as String?,accessTokenExpiresIn: freezed == accessTokenExpiresIn ? _self.accessTokenExpiresIn : accessTokenExpiresIn // ignore: cast_nullable_to_non_nullable
-as DateTime?,refreshToken: freezed == refreshToken ? _self.refreshToken : refreshToken // ignore: cast_nullable_to_non_nullable
-as String?,refreshTokenExpiresIn: freezed == refreshTokenExpiresIn ? _self.refreshTokenExpiresIn : refreshTokenExpiresIn // ignore: cast_nullable_to_non_nullable
-as DateTime?,
+bearerToken: freezed == bearerToken ? _self.bearerToken : bearerToken // ignore: cast_nullable_to_non_nullable
+as String?,
   ));
 }
 
@@ -607,7 +595,7 @@ as DateTime?,
 /// @nodoc
 mixin _$User {
 
-@JsonKey(name: '_id') String? get id; String? get email; String? get loginFlowType; String? get loginType; String? get status;
+@JsonKey(name: '_id') String? get id; String? get email; String? get firstName; String? get lastName;
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -620,16 +608,16 @@ $UserCopyWith<User> get copyWith => _$UserCopyWithImpl<User>(this as User, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is User&&(identical(other.id, id) || other.id == id)&&(identical(other.email, email) || other.email == email)&&(identical(other.loginFlowType, loginFlowType) || other.loginFlowType == loginFlowType)&&(identical(other.loginType, loginType) || other.loginType == loginType)&&(identical(other.status, status) || other.status == status));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is User&&(identical(other.id, id) || other.id == id)&&(identical(other.email, email) || other.email == email)&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,email,loginFlowType,loginType,status);
+int get hashCode => Object.hash(runtimeType,id,email,firstName,lastName);
 
 @override
 String toString() {
-  return 'User(id: $id, email: $email, loginFlowType: $loginFlowType, loginType: $loginType, status: $status)';
+  return 'User(id: $id, email: $email, firstName: $firstName, lastName: $lastName)';
 }
 
 
@@ -640,7 +628,7 @@ abstract mixin class $UserCopyWith<$Res>  {
   factory $UserCopyWith(User value, $Res Function(User) _then) = _$UserCopyWithImpl;
 @useResult
 $Res call({
-@JsonKey(name: '_id') String? id, String? email, String? loginFlowType, String? loginType, String? status
+@JsonKey(name: '_id') String? id, String? email, String? firstName, String? lastName
 });
 
 
@@ -657,13 +645,12 @@ class _$UserCopyWithImpl<$Res>
 
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? email = freezed,Object? loginFlowType = freezed,Object? loginType = freezed,Object? status = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? email = freezed,Object? firstName = freezed,Object? lastName = freezed,}) {
   return _then(_self.copyWith(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,email: freezed == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
-as String?,loginFlowType: freezed == loginFlowType ? _self.loginFlowType : loginFlowType // ignore: cast_nullable_to_non_nullable
-as String?,loginType: freezed == loginType ? _self.loginType : loginType // ignore: cast_nullable_to_non_nullable
-as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,firstName: freezed == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
+as String?,lastName: freezed == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }
@@ -749,10 +736,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? loginFlowType,  String? loginType,  String? status)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _User() when $default != null:
-return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.status);case _:
+return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
   return orElse();
 
 }
@@ -770,10 +757,10 @@ return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.s
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? loginFlowType,  String? loginType,  String? status)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)  $default,) {final _that = this;
 switch (_that) {
 case _User():
-return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.status);case _:
+return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -790,10 +777,10 @@ return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.s
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: '_id')  String? id,  String? email,  String? loginFlowType,  String? loginType,  String? status)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: '_id')  String? id,  String? email,  String? firstName,  String? lastName)?  $default,) {final _that = this;
 switch (_that) {
 case _User() when $default != null:
-return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.status);case _:
+return $default(_that.id,_that.email,_that.firstName,_that.lastName);case _:
   return null;
 
 }
@@ -805,14 +792,13 @@ return $default(_that.id,_that.email,_that.loginFlowType,_that.loginType,_that.s
 @JsonSerializable()
 
 class _User implements User {
-  const _User({@JsonKey(name: '_id') this.id, this.email, this.loginFlowType, this.loginType, this.status});
+  const _User({@JsonKey(name: '_id') this.id, this.email, this.firstName, this.lastName});
   factory _User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
 @override@JsonKey(name: '_id') final  String? id;
 @override final  String? email;
-@override final  String? loginFlowType;
-@override final  String? loginType;
-@override final  String? status;
+@override final  String? firstName;
+@override final  String? lastName;
 
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
@@ -827,16 +813,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _User&&(identical(other.id, id) || other.id == id)&&(identical(other.email, email) || other.email == email)&&(identical(other.loginFlowType, loginFlowType) || other.loginFlowType == loginFlowType)&&(identical(other.loginType, loginType) || other.loginType == loginType)&&(identical(other.status, status) || other.status == status));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _User&&(identical(other.id, id) || other.id == id)&&(identical(other.email, email) || other.email == email)&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,email,loginFlowType,loginType,status);
+int get hashCode => Object.hash(runtimeType,id,email,firstName,lastName);
 
 @override
 String toString() {
-  return 'User(id: $id, email: $email, loginFlowType: $loginFlowType, loginType: $loginType, status: $status)';
+  return 'User(id: $id, email: $email, firstName: $firstName, lastName: $lastName)';
 }
 
 
@@ -847,7 +833,7 @@ abstract mixin class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) _then) = __$UserCopyWithImpl;
 @override @useResult
 $Res call({
-@JsonKey(name: '_id') String? id, String? email, String? loginFlowType, String? loginType, String? status
+@JsonKey(name: '_id') String? id, String? email, String? firstName, String? lastName
 });
 
 
@@ -864,13 +850,12 @@ class __$UserCopyWithImpl<$Res>
 
 /// Create a copy of User
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? email = freezed,Object? loginFlowType = freezed,Object? loginType = freezed,Object? status = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? email = freezed,Object? firstName = freezed,Object? lastName = freezed,}) {
   return _then(_User(
 id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String?,email: freezed == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
-as String?,loginFlowType: freezed == loginFlowType ? _self.loginFlowType : loginFlowType // ignore: cast_nullable_to_non_nullable
-as String?,loginType: freezed == loginType ? _self.loginType : loginType // ignore: cast_nullable_to_non_nullable
-as String?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,firstName: freezed == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
+as String?,lastName: freezed == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as String?,
   ));
 }

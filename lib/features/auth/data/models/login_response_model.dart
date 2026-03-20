@@ -5,7 +5,7 @@ part 'login_response_model.g.dart';
 
 @freezed
 abstract class LoginResponseModel with _$LoginResponseModel {
-  const factory LoginResponseModel({String? message, String? expiry, Token? token, User? user}) = _LoginResponseModel;
+  const factory LoginResponseModel({String? message, Token? token, User? user}) = _LoginResponseModel;
   // TODO: Implement GraphQL fromRemote method once GraphQL types are generated
   // factory LoginResponseModel.fromRemote(GLoginWithEmailPasswordData_loginWithEmailPassword data) {
   //   final Expiry? expiry = data.expiry == null
@@ -21,12 +21,7 @@ abstract class LoginResponseModel with _$LoginResponseModel {
 
 @freezed
 abstract class Token with _$Token {
-  const factory Token({
-    String? accessToken,
-    DateTime? accessTokenExpiresIn,
-    String? refreshToken,
-    DateTime? refreshTokenExpiresIn,
-  }) = _Token;
+  const factory Token({String? bearerToken}) = _Token;
 
   // TODO: Implement GraphQL fromRemote method once GraphQL types are generated
   // factory Token.fromRemote(GTokenFragment token) => Token(
@@ -41,13 +36,7 @@ abstract class Token with _$Token {
 
 @freezed
 abstract class User with _$User {
-  const factory User({
-    @JsonKey(name: '_id') String? id,
-    String? email,
-    String? loginFlowType,
-    String? loginType,
-    String? status,
-  }) = _User;
+  const factory User({@JsonKey(name: '_id') String? id, String? email, String? firstName, String? lastName}) = _User;
 
   // TODO: Implement GraphQL fromRemote method once GraphQL types are generated
   // factory User.fromRemote(GUserRespInEmailLoginFragment user) => User(

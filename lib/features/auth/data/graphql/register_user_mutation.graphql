@@ -1,0 +1,11 @@
+mutation registerUser($email:String!, $password:String!,$firstName:String!,$lastName:String!){
+    register(body:{email: $email, password:$password, firstName:$firstName, lastName:$lastName}){
+        message
+        user{
+            id
+            firstName
+            lastName
+            email
+        }
+    }
+}
